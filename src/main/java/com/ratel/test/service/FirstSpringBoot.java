@@ -14,10 +14,4 @@ public class FirstSpringBoot {
         return "abc";
     }
 
-
-
-
-
-
-
 }
