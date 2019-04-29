@@ -31,12 +31,18 @@
         </dependency>
 
         <!-- 配置文件自动映射 -->
-       <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-configuration-processor</artifactId>
-        <optional>true</optional>
-    </dependency>
-</dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- 配置lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
