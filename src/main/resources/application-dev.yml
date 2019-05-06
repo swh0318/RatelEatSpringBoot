@@ -1,8 +1,29 @@
 server:
   port: 8080
 
+#*********************bean配置*********************************
 Person:
   name: William
   age: 30
   sex: man
   from: hengshui.HB
+
+#*********************acuator配置*******************************
+info:
+  head: 123
+  body: abc
+management:
+  health:
+    rabbit:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        #加载所有的端点，默认只加载了info、health
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    #可以关闭指定的端点
+    shutdown:
+      enabled: false
