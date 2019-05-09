@@ -15,6 +15,9 @@ public class TestApplication {
         SpringApplication.run(TestApplication.class, args);
     }
 
+    /**
+     * actuator注入bean
+     */
     @Configuration
     static class MyEndpointConfiguration{
         @Bean
