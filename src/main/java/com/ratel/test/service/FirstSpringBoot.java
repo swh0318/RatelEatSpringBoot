@@ -56,11 +56,15 @@ public class FirstSpringBoot {
     /**
      * 切面编程注解实例测试
      */
-    @ErrorLog("errorlog_value")
     @RequestMapping("aspectAnnotation")
-    public String aspectAnnotation(){
+    @ErrorLog("errorlog_value")
+    public String aspectAnnotation(String name) {
         System.out.println("step into aspectAnnotation");
         return "request successfully";
+    }
+
+    public String apectjAnnotation(String param) {
+        return param;
     }
 
 
