@@ -1,9 +1,9 @@
 package com.ratel.test.service;
 
-
 import com.ratel.test.knowledge.Person;
 import com.ratel.test.service.annotation.EmployeeInfo;
 import com.ratel.test.service.annotation.EmployeeInfoUtil;
+import com.ratel.test.service.aop.ErrorLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,6 +45,22 @@ public class FirstSpringBoot {
         return EmployeeInfoUtil.getEmployeeInfo(EmployeeInfo.class);
     }
 
+    /**
+     * 编译时注解，暂未编译成功
+     */
+    @RequestMapping("compileAnnotation")
+    public void compileAnnotation(){
+        System.out.println("step into compileAnnotation");
+    }
+
+    /**
+     * 切面编程注解实例测试
+     */
+    @ErrorLog("errorlog_value")
+    @RequestMapping("aspectAnnotation")
+    public void aspectAnnotation(){
+        System.out.println("step into aspectAnnotation");
+    }
 
 
 }
