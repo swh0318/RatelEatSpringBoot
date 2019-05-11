@@ -58,8 +58,9 @@ public class FirstSpringBoot {
      */
     @ErrorLog("errorlog_value")
     @RequestMapping("aspectAnnotation")
-    public void aspectAnnotation(){
+    public String aspectAnnotation(){
         System.out.println("step into aspectAnnotation");
+        return "request successfully";
     }
 
 
