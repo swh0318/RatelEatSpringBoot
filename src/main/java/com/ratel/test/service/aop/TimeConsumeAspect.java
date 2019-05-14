@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class TimeConsumeAspect {
+
     // 第一个*代表返回类型不限
     // 第二个*代表所有类
     // 第三个*代表所有方法
@@ -20,14 +21,15 @@ public class TimeConsumeAspect {
     public void pointCut() {
     }
 
-    ;
+    @Pointcut("within(com.ratel.test.service.FirstSpringBoot.*)")
+    public void withInpointCut(){
+
+    }
 
     @Pointcut("@annotation(ErrorLog)")
     @Order(1) // Order 代表优先级，数字越小优先级越高
     public void annoationPoint() {
     }
-
-    ;
 
     @Before(value = "annoationPoint() || pointCut()")
     public void around(JoinPoint pjp) throws Throwable {
