@@ -3,6 +3,7 @@ package com.ratel.test.service;
 import com.ratel.test.knowledge.Person;
 import com.ratel.test.service.annotation.EmployeeInfo;
 import com.ratel.test.service.annotation.EmployeeInfoUtil;
+import com.ratel.test.service.annotation.TestResourceAnnotaion;
 import com.ratel.test.service.aop.ErrorLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.Map;
 
 @RestController
@@ -19,6 +21,9 @@ public class FirstSpringBoot {
 
     @Autowired
     Person person;
+
+    @Autowired
+    TestResourceAnnotaion testResourceAnnotaion;
 
     /**
      * 测试映射注解
@@ -40,6 +45,10 @@ public class FirstSpringBoot {
         return "姓名："+ person.getName() + "年龄："+ person.getAge();
     }
 
+    /**
+     * 测试运行注解
+     * @return
+     */
     @RequestMapping("runtimeAnnotation")
     public Map getAnnotationInfos() {
         return EmployeeInfoUtil.getEmployeeInfo(EmployeeInfo.class);
@@ -63,8 +72,10 @@ public class FirstSpringBoot {
         return "request successfully";
     }
 
-    public String apectjAnnotation(String param) {
-        return param;
+
+    @RequestMapping("resourceAnnotation")
+    public double testResourceAnnotation(String param) {
+        return testResourceAnnotaion.getRandomNum();
     }
 
 
