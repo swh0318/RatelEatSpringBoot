@@ -5,6 +5,8 @@ import com.ratel.test.service.annotation.EmployeeInfo;
 import com.ratel.test.service.annotation.EmployeeInfoUtil;
 import com.ratel.test.service.annotation.TestResourceAnnotaion;
 import com.ratel.test.service.aop.ErrorLog;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +20,8 @@ import java.util.Map;
 @RequestMapping(value = "test")
 @EnableAutoConfiguration
 public class FirstSpringBoot {
+
+    private Logger logger = LoggerFactory.getLogger(FirstSpringBoot.class);
 
     @Autowired
     Person person;
@@ -73,6 +77,11 @@ public class FirstSpringBoot {
     }
 
 
+    /**
+     * 测试Resource注解是否好使
+     * @param param
+     * @return
+     */
     @RequestMapping("resourceAnnotation")
     public double testResourceAnnotation(String param) {
         return testResourceAnnotaion.getRandomNum();

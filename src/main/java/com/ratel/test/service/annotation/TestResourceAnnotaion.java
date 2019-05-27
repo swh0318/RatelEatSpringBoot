@@ -1,4 +1,5 @@
 package com.ratel.test.service.annotation;
+
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController

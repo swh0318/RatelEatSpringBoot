@@ -8,7 +8,7 @@ This Project is indroducing basic Spring Boot Technology to you。
     http://127.0.0.1:8080/firstSpringBoot/beantest
    2、firstSpringBoot测试
     http://127.0.0.1:8080/firstSpringBoot/mappingTest
-   3、
+   3、测试
    4、
    5、
    6、

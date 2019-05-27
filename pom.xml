@@ -87,6 +87,7 @@
         </dependency>
         <!-- jdbc 数据源配置 依赖 结束 -->
 
+        <!-- springBoot logback应用日志框架配置 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
@@ -96,6 +97,7 @@
     <build>
         <plugins>
             <plugin>
+                <!-- maven 打包插件 -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <executions>

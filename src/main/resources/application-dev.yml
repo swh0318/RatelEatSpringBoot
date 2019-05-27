@@ -27,3 +27,7 @@ management:
     #可以关闭指定的端点
     shutdown:
       enabled: false
+
+# 配置logging位置
+logging:
+  config: classpath:properties/logback-spring-dev.xml
