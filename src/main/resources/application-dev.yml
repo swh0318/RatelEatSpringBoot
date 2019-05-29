@@ -12,6 +12,7 @@ Person:
 info:
   head: 123
   body: abc
+
 management:
   health:
     rabbit:
@@ -28,6 +29,6 @@ management:
     shutdown:
       enabled: false
 
-# 配置logging位置
+#*****************配置logging文件位置*********************
 logging:
   config: classpath:properties/logback-spring-dev.xml
